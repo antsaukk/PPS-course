@@ -1,0 +1,92 @@
+2. 
+(a) B: 4 (n); D: 6 (2(n-1))
+
+https://www.sciencedirect.com/topics/computer-science/bisection-width (CTRL-F "In a 2D mesh the n nodes are arranged in a (usually square)")
+https://www.iitg.ac.in/asahu/cs523e/Lects/MPLec04.pdf
+
+(b) B: 8 (2n); D: 4 (n) ???
+
+https://web.cse.msstate.edu/~luke/Courses/sp03/CS4163/hw1-solutions.pdf
+https://www.sciencedirect.com/topics/computer-science/bisection-width (CTRL-F "It has a degree of 6")
+https://www.iitg.ac.in/asahu/cs523e/Lects/MPLec04.pdf
+
+
+(c) B: 8 (N/2) N-number of nodes; D: 4 (n) n-dimension of hypercube
+
+https://en.wikipedia.org/wiki/Hypercube_graph
+https://www.iitg.ac.in/asahu/cs523e/Lects/MPLec04.pdf
+https://www.cse.iitb.ac.in/~ranade/408/archive/week2.pdf - bisection hypercube
+
+(d) B: 1 (1); D: 3 (k)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+4.
+https://docs.csc.fi/computing/systems-mahti/ -mahti topology description. What has to be done exactly? 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+5. Tp = f + (1-f)/P, f=0.2 (seq), 1-f=0.8 (par)
+
+(a) P = 8
+
+Tp = 0.2 + 0.8/8 = 0.2 + 0.1 = 0.3
+
+(b) P = 16
+
+Tp = 0.2 + 0.8/16 = 0.2 + 0.5 = 0.25
+
+(c) P = 32
+
+Tp = 0.2 + 0.8/32 = 0.2 + 0.025 = 0.225
+
+(d) Is this s a scaling or bad scaling? What is meant by "good" and "bad" scaling? 
+
+I would consider it to be a bad scaling as obtained speedup as function of P is not impressive:
+
+T1/T8  = 1/0.3   = 3.33
+T1/T16 = 1/0.25  = 4
+T1/T32 = 1/0.225 = 4.44
+
+and upper bound of speed up is only 5. So no much room for improvement.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+6. Wp/W1 = f + (1-f)*P, f=0.2 (seq), 1-f=0.8 (par)
+
+(a) P = 8
+
+Wp/W1 = f + (1-f)*P = 0.2 + 0.8*8 = 0.2 + 6.4 = 6.6
+
+(b) P = 16
+
+Wp/W1 = f + (1-f)*P = 0.2 + 0.8*16 = 0.2 + 12.8 = 13
+
+(c) P = 32
+
+Wp/W1 = f + (1-f)*P = 0.2 + 0.8*32 = 0.2 + 25.6 = 25.8
+
+(d) Is this s a scaling or bad scaling? What is meant by "good" and "bad" scaling? 
+
+Why is the result so different?
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+7.
+
+(a) Additional yellow points in the corners
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

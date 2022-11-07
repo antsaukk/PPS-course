@@ -1,0 +1,44 @@
+5.
+In total, Triton cluser has 16 different types of nodes, where each node is server-type machine
+with different CPU or/and GPU. For instance, as we can see here (https://scicomp.aalto.fi/triton/overview/)
+Triton has 65 nodes of type Dell PowerEdge C4130 of 2016 and 128GB of memory.
+This node has:
+
+1) CPU Xeon E5 2680 v3 with :
+- 2.50 GHz base frequency and 3.30 GHz turbo frequency
+- ??? 12 cores with 2 threads per core => 12 cores, 24 threads per CPU
+- 30 MB Intel smart cache
+
+2) 128GB DDR4-2133 type of memory, HDD disks
+
+(https://ark.intel.com/content/www/us/en/ark/products/81908/intel-xeon-processor-e52680-v3-30m-cache-2-50-ghz.html)
+
+3) Up to four 300W PCIe accelerators per 1U server (https://i.dell.com/sites/doccontent/shared-content/data-sheets/en/Documents/Dell-PowerEdge-C4130-Spec-Sheet.pdf)
+
+4) it has no GPU
+
+6. My mobile phone is iPhone 8 with 64GB
+It has Apple A11 Bionic Neural Engine SoC (System-on-Chip), which means that all necessary hardware components are integrated together. In particular, SoC integrates:
+
+1) 6-core 64-bit ARMv8-A CPU with max clock rate up to 2.39 GHz and "Monsoon" and "Mistral" architechture. The CPU has 6 cores and 1 thread per core, so 6 threads.
+(https://en.wikichip.org/wiki/apple/ax/a11)
+(https://en.wikipedia.org/wiki/Apple_A11)
+
+2) ??? Apple-designed 3 Core GPU ???
+(https://en.wikichip.org/wiki/apple/ax/a11)
+
+3) L1 cache with 64 KB for instruction and 64 KB for data
+4) L2 cache of 8 MB
+(https://en.wikipedia.org/wiki/Apple_A11)
+
+Phone itself has 64GB of storage
+and 2 GB LPDDR4X RAM Memory type, which is not part of SoC.
+(https://en.wikipedia.org/wiki/IPhone_8#Chipset)
+
+Accelerators?
+
+Difference of Mobile and HPC:
+The evident difference with HPC hardware is of course a scale of capacity and architechture itself (Not meaning ISA here, even though it also different). Mobile device integrates everything as SoC (including GPU), while HPC hardware consist of heterogenous hardware components, integrated with specific built in logic and in case of Dell PowerEdge, without GPU. Obviously, size of RAM and cache memories is different as well.
+Another crucial difference is that mobile CPU a uniprocessor, while HPC CPU we looked as is a multiprocessor and we can see from specification and number of threads per core. Another difference is that maximum clock frequency in the HPC environment is higher than in mobile device. To be precise: base operating frequency of HPC CPU in one node is higher than maximum operating frequency of mobile device. This could be (possibly) explained by the fact that cooling capacity of HPC environment is larger than that of a mobile device and thus, it allows operating on higher frequencies safely.
+Moreover, ISA is different (ARM vs Intel).
+Note that comparison above only considers specifications of a single node (only a little part of HPC hardware) with the whole system of mobile device and they are already considerably different on such a fine-grained scale. Thus, whole HPC hardware is in fact very very different from mobile device.
