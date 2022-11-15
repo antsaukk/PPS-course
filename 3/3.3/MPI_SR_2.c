@@ -15,6 +15,8 @@ int main(int argc, char** argv) {
 
   sendbuf[5]=5;
 
+  printf("Buffer size is %d\n", bufsize);
+  
   /* Initialize the MPI execution environment */
   MPI_Init(&argc,&argv);
 
@@ -42,7 +44,7 @@ int main(int argc, char** argv) {
    MPI_Irecv(recvbuf,bufsize,MPI_INT,your_id,0,MPI_COMM_WORLD,&request);
    MPI_Isend(sendbuf,bufsize,MPI_INT,your_id,0,MPI_COMM_WORLD,&request);
    MPI_Wait(&request,MPI_STATUS_IGNORE);
-   
+
    end = MPI_Wtime();
 
    printf("Rank %d has received this %d from  %d\n",my_id,recvbuf[5],your_id);
